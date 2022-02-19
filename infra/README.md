@@ -1,5 +1,10 @@
 # Infra for AWS Lambda templates
 
+Using:
+
+* TypeScript
+* Node 14.x (at the time of writing the version supported by AWS Lambda)
+
 ## Useful commands
 
 * `npm run all`         run all steps
