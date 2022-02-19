@@ -81,7 +81,7 @@ Object {
           "S3Key": "97ff0d60e9859f948e1e2afdd83914b414fa56f0c66709e95a64f3a427878fa7.zip",
         },
         "Description": "Blank Lambda template using Java with Powertools",
-        "FunctionName": "blank-java-template",
+        "FunctionName": "blank-java-template-with-powertools",
         "Handler": "be.petey952.blankjavapowertools.Handler",
         "MemorySize": 512,
         "Role": Object {
