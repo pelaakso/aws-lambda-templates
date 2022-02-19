@@ -8,7 +8,7 @@ export class JavaStack extends Stack {
 
     new lambda.Function(this, 'BlankJava', {
       code: lambda.Code.fromAsset('../java/blank-java/target/blank-java-0.0.1-SNAPSHOT-package.zip'),
-      handler: '',
+      handler: 'be.petey952.blankjava.Handler',
       runtime: lambda.Runtime.JAVA_11,
       architecture: lambda.Architecture.ARM_64,
       memorySize: 512,
