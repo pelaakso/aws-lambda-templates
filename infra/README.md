@@ -1,6 +1,6 @@
 # Infra for AWS Lambda templates
 
-Using
+Using:
 
 * TypeScript
 * Node 14.x (at the time of writing the version supported by AWS Lambda)
