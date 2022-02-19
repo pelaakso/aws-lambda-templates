@@ -7,3 +7,14 @@
 
 #Maven
 target/
+
+# CDK & infra stuff
+*.js
+!jest.config.js
+!.prettierrc.js
+!.eslintrc.js
+*.d.ts
+node_modules/
+
+.cdk.staging
+cdk.out/
