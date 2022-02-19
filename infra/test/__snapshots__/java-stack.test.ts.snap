@@ -24,7 +24,7 @@ Object {
         },
         "Description": "Blank Lambda template using Java",
         "FunctionName": "blank-java-template",
-        "Handler": "",
+        "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
         "Role": Object {
           "Fn::GetAtt": Array [
