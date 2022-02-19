@@ -9,6 +9,7 @@
     "build": "tsc",
     "clean": "npx rimraf '+(bin|lib|functions|test|utils)/**/+(*.d.ts|*.js)'",
     "watch": "tsc -w",
+    "snap": "jest",
     "test": "npm run build && jest",
     "cdk": "npx cdk"
   },
