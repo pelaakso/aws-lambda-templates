@@ -16,5 +16,18 @@ export class JavaStack extends Stack {
       functionName: 'blank-java-template',
       description: 'Blank Lambda template using Java',
     });
+
+    new lambda.Function(this, 'BlankJavaWithPowertools', {
+      code: lambda.Code.fromAsset(
+        '../java/blank-java-with-powertools/target/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip'
+      ),
+      handler: 'be.petey952.blankjavapowertools.Handler',
+      runtime: lambda.Runtime.JAVA_11,
+      architecture: lambda.Architecture.ARM_64,
+      memorySize: 512,
+      timeout: Duration.seconds(15),
+      functionName: 'blank-java-template',
+      description: 'Blank Lambda template using Java with Powertools',
+    });
   }
 }
