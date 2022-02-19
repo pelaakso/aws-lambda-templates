@@ -26,6 +26,9 @@ export class JavaStack extends Stack {
       architecture: lambda.Architecture.ARM_64,
       memorySize: 512,
       timeout: Duration.seconds(15),
+      environment: {
+        POWERTOOLS_SERVICE_NAME: 'BlankTemplateWithPowertools',
+      },
       functionName: 'blank-java-template-with-powertools',
       description: 'Blank Lambda template using Java with Powertools',
     });

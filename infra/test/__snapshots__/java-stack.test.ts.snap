@@ -20,7 +20,7 @@ Object {
         ],
         "Code": Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
-          "S3Key": "c68b815d3fdf15c7255405cb551028d7d320775e4daa9c5c47ccdf3ebadffb10.zip",
+          "S3Key": "b13e02d8c10c28505d5a43f4526934de5b394f3d3f116f30b6b2be0969f6cf56.zip",
         },
         "Description": "Blank Lambda template using Java",
         "FunctionName": "blank-java-template",
@@ -78,9 +78,14 @@ Object {
         ],
         "Code": Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
-          "S3Key": "97ff0d60e9859f948e1e2afdd83914b414fa56f0c66709e95a64f3a427878fa7.zip",
+          "S3Key": "da885a7ec162a0d9cbe1f2fb1b23efd9acd9a44b1837b3974047369f9d1f647e.zip",
         },
         "Description": "Blank Lambda template using Java with Powertools",
+        "Environment": Object {
+          "Variables": Object {
+            "POWERTOOLS_SERVICE_NAME": "BlankTemplateWithPowertools",
+          },
+        },
         "FunctionName": "blank-java-template-with-powertools",
         "Handler": "be.petey952.blankjavapowertools.Handler",
         "MemorySize": 512,
