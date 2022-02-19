@@ -14,9 +14,10 @@ public class Handler implements RequestHandler<String, String> {
     }
 
     @Override
-    @Logging(samplingRate = 1.0)
+    @Logging
     public String handleRequest(String s, Context context) {
         LOG.info("Handler was called");
+        LOG.info("Payload string was {}", s);
 
         return "200 OK";
     }
