@@ -3,7 +3,9 @@ name: Infra - build and test
 on:
   push:
     paths:
-      - 'infra/**'
+      # Disabling the workflow for now as it's not yet working
+      #- 'infra/**'
+      - 'infra'
 
 jobs:
   build-and-test-infra:
