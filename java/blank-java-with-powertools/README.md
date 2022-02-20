@@ -12,7 +12,9 @@ References
 
 ## Build
 
-`mvn clean package` in `java` directory.
+`mvn clean package` or `gradle clean build` in `java` directory.
+
+Tested with Gradle 7.4.
 
 ## Deploy
 
