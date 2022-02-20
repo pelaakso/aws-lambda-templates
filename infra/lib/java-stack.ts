@@ -27,7 +27,7 @@ export class JavaStack extends Stack {
       memorySize: 512,
       timeout: Duration.seconds(15),
       environment: {
-        POWERTOOLS_SERVICE_NAME: 'BlankTemplateWithPowertools',
+        POWERTOOLS_SERVICE_NAME: 'BlankJavaTemplateWithPowertools',
       },
       functionName: 'blank-java-template-with-powertools',
       description: 'Blank Lambda template using Java with Powertools',

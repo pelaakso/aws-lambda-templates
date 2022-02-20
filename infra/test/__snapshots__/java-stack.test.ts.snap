@@ -83,7 +83,7 @@ Object {
         "Description": "Blank Lambda template using Java with Powertools",
         "Environment": Object {
           "Variables": Object {
-            "POWERTOOLS_SERVICE_NAME": "BlankTemplateWithPowertools",
+            "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertools",
           },
         },
         "FunctionName": "blank-java-template-with-powertools",
