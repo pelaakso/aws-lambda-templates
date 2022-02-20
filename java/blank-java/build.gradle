@@ -1,0 +1,28 @@
+description = 'Blank AWS Lambda function template in Java'
+
+dependencies {
+    // Dependencies
+    implementation "com.amazonaws:aws-lambda-java-core:${awsLambdaJavaCoreVersion}"
+    implementation "com.amazonaws:aws-lambda-java-events:${awsLambdaJavaEventsVersion}"
+    implementation "com.amazonaws:aws-lambda-java-log4j2:${awsLambdaJavaLog4j2Version}"
+    implementation "org.apache.logging.log4j:log4j-api:${log4j2Version}"
+    implementation "org.apache.logging.log4j:log4j-core:${log4j2Version}"
+    implementation "org.apache.logging.log4j:log4j-slf4j18-impl:${log4j2Version}"
+
+    // Test dependencies
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjCoreVersion}"
+}
+
+task buildZip(type: Zip) {
+    // Fine tune the generated zip file name
+    archiveClassifier = 'package'
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtimeClasspath
+    }
+}
+
+build.dependsOn buildZip
