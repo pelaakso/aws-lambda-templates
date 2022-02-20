@@ -1,0 +1,27 @@
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+
+    group = 'be.petey952.awslambdatemplates'
+    version = '0.0.1-SNAPSHOT'
+
+    sourceCompatibility = 11
+    targetCompatibility = 11
+
+    repositories {
+        mavenCentral()
+    }
+
+    // To get more info about usages of deprecated and unchecked stuff
+    compileJava {
+        options.compilerArgs << '-Xlint:deprecation' << '-Xlint:unchecked'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
