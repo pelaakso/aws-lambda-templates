@@ -20,7 +20,7 @@ Object {
         ],
         "Code": Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
-          "S3Key": "02eaccf2c7a5bca24a1360de04a6ec227dfbebb07d930a867f0fe8ee5fc32f4d.zip",
+          "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java",
         "FunctionName": "blank-java-template",
@@ -78,7 +78,7 @@ Object {
         ],
         "Code": Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
-          "S3Key": "3f217f6e5142f6869799aabc18ef8ccee2483f40bb92ef335bb1381caf5e6260.zip",
+          "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java with Powertools",
         "Environment": Object {
