@@ -25,4 +25,5 @@ Using the CDK infra in this repo.
 
 ## Invoke
 
-aws --profile your-profile lambda invoke --function-name blank-java-template --payload '"value"' ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-java-template-mvn --payload '"value"' ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-java-template-gradle --payload '"value"' ~/tmp/lambda-output.txt

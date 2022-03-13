@@ -22,8 +22,8 @@ Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
-        "Description": "Blank Lambda template using Java",
-        "FunctionName": "blank-java-template",
+        "Description": "Blank Lambda template using Java, Maven build",
+        "FunctionName": "blank-java-template-mvn",
         "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
         "Role": Object {
@@ -36,6 +36,64 @@ Object {
         "Timeout": 15,
       },
       "Type": "AWS::Lambda::Function",
+    },
+    "BlankJavaGradle3831E4B7": Object {
+      "DependsOn": Array [
+        "BlankJavaGradleServiceRole03F116AA",
+      ],
+      "Properties": Object {
+        "Architectures": Array [
+          "arm64",
+        ],
+        "Code": Object {
+          "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
+          "S3Key": 64-byte-asset-hash-removed.zip,
+        },
+        "Description": "Blank Lambda template using Java, Gradle build",
+        "FunctionName": "blank-java-template-gradle",
+        "Handler": "be.petey952.blankjava.Handler",
+        "MemorySize": 512,
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "BlankJavaGradleServiceRole03F116AA",
+            "Arn",
+          ],
+        },
+        "Runtime": "java11",
+        "Timeout": 15,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "BlankJavaGradleServiceRole03F116AA": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
     },
     "BlankJavaServiceRole6CD6549F": Object {
       "Properties": Object {
@@ -80,13 +138,13 @@ Object {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
-        "Description": "Blank Lambda template using Java with Powertools",
+        "Description": "Blank Lambda template using Java with Powertools, Maven build",
         "Environment": Object {
           "Variables": Object {
             "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertools",
           },
         },
-        "FunctionName": "blank-java-template-with-powertools",
+        "FunctionName": "blank-java-template-with-powertools-mvn",
         "Handler": "be.petey952.blankjavapowertools.Handler",
         "MemorySize": 512,
         "Role": Object {
@@ -99,6 +157,69 @@ Object {
         "Timeout": 15,
       },
       "Type": "AWS::Lambda::Function",
+    },
+    "BlankJavaWithPowertoolsGradleFE3A4C1A": Object {
+      "DependsOn": Array [
+        "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9",
+      ],
+      "Properties": Object {
+        "Architectures": Array [
+          "arm64",
+        ],
+        "Code": Object {
+          "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
+          "S3Key": 64-byte-asset-hash-removed.zip,
+        },
+        "Description": "Blank Lambda template using Java with Powertools, Gradle build",
+        "Environment": Object {
+          "Variables": Object {
+            "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertoolsGradle",
+          },
+        },
+        "FunctionName": "blank-java-template-with-powertools-gradle",
+        "Handler": "be.petey952.blankjavapowertools.Handler",
+        "MemorySize": 512,
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9",
+            "Arn",
+          ],
+        },
+        "Runtime": "java11",
+        "Timeout": 15,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
     },
     "BlankJavaWithPowertoolsServiceRoleC5418871": Object {
       "Properties": Object {
