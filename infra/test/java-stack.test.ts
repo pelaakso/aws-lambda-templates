@@ -17,8 +17,7 @@ test('Java stack snapshot', () => {
     test: (val) => (typeof val === 'string' && val.match(/[0-9a-f]{64}.zip/) ? true : false),
     print: (val) => {
       if (typeof val === 'string') {
-        const newVal = val.replace(/[0-9a-f]{64}.zip/, '64-byte-asset-hash-removed.zip');
-        return newVal;
+        return val.replace(/[0-9a-f]{64}.zip/, '64-byte-asset-hash-removed.zip');
       }
       return `${val}`;
     },
