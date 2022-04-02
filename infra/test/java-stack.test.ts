@@ -11,7 +11,7 @@ test('Java stack snapshot', () => {
 
   const template = Template.fromStack(myStack);
 
-  // Replace all 64 byte asset hashes, because they are likely to tchange from build to build.
+  // Replace all 64 byte asset hashes, because they are likely to change from build to build.
   // For example 02eaccf2c7a5bca24a1360de04a6ec227dfbebb07d930a867f0fe8ee5fc32f4d.zip
   expect.addSnapshotSerializer({
     test: (val) => (typeof val === 'string' && val.match(/[0-9a-f]{64}.zip/) ? true : false),
