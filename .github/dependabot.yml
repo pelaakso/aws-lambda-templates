@@ -26,8 +26,7 @@ updates:
 
   # Enable version updates for GHA workflows
   - package-ecosystem: "github-actions"
-    # Where to look for pom.xml files
-    directory: "/.github"
+    directory: "/"
     # Check updates every day (weekdays)
     schedule:
       interval: "daily"
