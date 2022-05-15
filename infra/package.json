@@ -4,6 +4,12 @@
   "bin": {
     "infra": "bin/infra.js"
   },
+
+  "engines": {
+    "node": ">16.0.0 <17.0.0",
+    "npm": ">8.0.0"
+  },
+
   "scripts": {
     "all": "npm run clean && npx eslint . && npx prettier --check . && npm run test",
     "build": "tsc",
@@ -13,6 +19,7 @@
     "test": "npm run build && jest",
     "cdk": "npx cdk"
   },
+
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "@types/node": "^14.18.18",
