@@ -4,12 +4,10 @@
   "bin": {
     "infra": "bin/infra.js"
   },
-
   "engines": {
     "node": ">16.0.0 <17.0.0",
     "npm": ">8.0.0"
   },
-
   "scripts": {
     "all": "npm run clean && npx eslint . && npx prettier --check . && npm run test",
     "build": "tsc",
@@ -19,14 +17,13 @@
     "test": "npm run build && jest",
     "cdk": "npx cdk"
   },
-
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "@types/node": "^14.18.18",
-    "@typescript-eslint/eslint-plugin": "^5.22.0",
-    "@typescript-eslint/parser": "^5.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
     "aws-cdk": "^2.23.0",
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
