@@ -22,5 +22,7 @@ Using the CDK infra in this repo.
 
 ## Invoke
 
+```
 aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-mvn --payload '"value"' ~/tmp/lambda-output.txt
 aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-gradle --payload '"value"' ~/tmp/lambda-output.txt
+```
