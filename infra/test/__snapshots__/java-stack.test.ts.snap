@@ -1,24 +1,24 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
 exports[`Java stack snapshot 1`] = `
-Object {
-  "Parameters": Object {
-    "BootstrapVersion": Object {
+{
+  "Parameters": {
+    "BootstrapVersion": {
       "Default": "/cdk-bootstrap/hnb659fds/version",
       "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
       "Type": "AWS::SSM::Parameter::Value<String>",
     },
   },
-  "Resources": Object {
-    "BlankJavaA787BB9F": Object {
-      "DependsOn": Array [
+  "Resources": {
+    "BlankJavaA787BB9F": {
+      "DependsOn": [
         "BlankJavaServiceRole6CD6549F",
       ],
-      "Properties": Object {
-        "Architectures": Array [
+      "Properties": {
+        "Architectures": [
           "arm64",
         ],
-        "Code": Object {
+        "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
@@ -26,8 +26,8 @@ Object {
         "FunctionName": "blank-java-template-mvn",
         "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "BlankJavaServiceRole6CD6549F",
             "Arn",
           ],
@@ -37,15 +37,15 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "BlankJavaGradle3831E4B7": Object {
-      "DependsOn": Array [
+    "BlankJavaGradle3831E4B7": {
+      "DependsOn": [
         "BlankJavaGradleServiceRole03F116AA",
       ],
-      "Properties": Object {
-        "Architectures": Array [
+      "Properties": {
+        "Architectures": [
           "arm64",
         ],
-        "Code": Object {
+        "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
@@ -53,8 +53,8 @@ Object {
         "FunctionName": "blank-java-template-gradle",
         "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "BlankJavaGradleServiceRole03F116AA",
             "Arn",
           ],
@@ -64,27 +64,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "BlankJavaGradleServiceRole03F116AA": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "BlankJavaGradleServiceRole03F116AA": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -95,27 +95,27 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "BlankJavaServiceRole6CD6549F": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "BlankJavaServiceRole6CD6549F": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -126,29 +126,29 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "BlankJavaWithPowertoolsCEDCD5E4": Object {
-      "DependsOn": Array [
+    "BlankJavaWithPowertoolsCEDCD5E4": {
+      "DependsOn": [
         "BlankJavaWithPowertoolsServiceRoleC5418871",
       ],
-      "Properties": Object {
-        "Architectures": Array [
+      "Properties": {
+        "Architectures": [
           "arm64",
         ],
-        "Code": Object {
+        "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java with Powertools, Maven build",
-        "Environment": Object {
-          "Variables": Object {
+        "Environment": {
+          "Variables": {
             "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertools",
           },
         },
         "FunctionName": "blank-java-template-with-powertools-mvn",
         "Handler": "be.petey952.blankjavapowertools.Handler",
         "MemorySize": 512,
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "BlankJavaWithPowertoolsServiceRoleC5418871",
             "Arn",
           ],
@@ -158,29 +158,29 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "BlankJavaWithPowertoolsGradleFE3A4C1A": Object {
-      "DependsOn": Array [
+    "BlankJavaWithPowertoolsGradleFE3A4C1A": {
+      "DependsOn": [
         "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9",
       ],
-      "Properties": Object {
-        "Architectures": Array [
+      "Properties": {
+        "Architectures": [
           "arm64",
         ],
-        "Code": Object {
+        "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java with Powertools, Gradle build",
-        "Environment": Object {
-          "Variables": Object {
+        "Environment": {
+          "Variables": {
             "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertoolsGradle",
           },
         },
         "FunctionName": "blank-java-template-with-powertools-gradle",
         "Handler": "be.petey952.blankjavapowertools.Handler",
         "MemorySize": 512,
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9",
             "Arn",
           ],
@@ -190,27 +190,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "BlankJavaWithPowertoolsGradleServiceRoleD66F03F9": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -221,27 +221,27 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "BlankJavaWithPowertoolsServiceRoleC5418871": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "BlankJavaWithPowertoolsServiceRoleC5418871": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -253,22 +253,22 @@ Object {
       "Type": "AWS::IAM::Role",
     },
   },
-  "Rules": Object {
-    "CheckBootstrapVersion": Object {
-      "Assertions": Array [
-        Object {
-          "Assert": Object {
-            "Fn::Not": Array [
-              Object {
-                "Fn::Contains": Array [
-                  Array [
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
                     "1",
                     "2",
                     "3",
                     "4",
                     "5",
                   ],
-                  Object {
+                  {
                     "Ref": "BootstrapVersion",
                   },
                 ],

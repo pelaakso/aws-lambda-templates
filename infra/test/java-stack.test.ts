@@ -1,6 +1,7 @@
 import { Template } from 'aws-cdk-lib/assertions';
 import * as cdk from 'aws-cdk-lib';
 import * as Java from '../lib/java-stack';
+import { expect, test } from 'vitest';
 
 test('Java stack snapshot', () => {
   const stack = new cdk.Stack();
