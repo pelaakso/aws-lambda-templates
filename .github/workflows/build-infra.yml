@@ -3,9 +3,8 @@ name: Infra - build and test
 on:
   push:
     paths:
-      # Disabling the workflow for now as it's not yet working
-      #- 'infra/**'
-      - 'infra'
+      - 'infra/**'
+      - '.github/workflows/build-infra.yml'
 
 jobs:
   build-and-test-infra:
@@ -33,5 +32,8 @@ jobs:
       - name: Lint
         run: npx eslint .
 
+      - name: Code style
+        run: npx prettier --check .
+
       - name: Test infra
-        run: npm run all
+        run: npm run test
