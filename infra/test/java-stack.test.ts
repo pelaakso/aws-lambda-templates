@@ -8,6 +8,7 @@ test('Java stack snapshot', () => {
 
   const myStack = new Java.JavaStack(stack, 'MyTestStack', {
     env: { account: '140966923789', region: 'eu-central-1' },
+    isUnitTest: true,
   });
 
   const template = Template.fromStack(myStack);
