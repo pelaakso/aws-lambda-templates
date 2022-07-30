@@ -29,4 +29,4 @@ jobs:
         run: mvn -B clean package
 
       - name: Build and test / Gradle
-        run: gradle --no-daemon clean build
+        run: ./gradlew --no-daemon clean build
