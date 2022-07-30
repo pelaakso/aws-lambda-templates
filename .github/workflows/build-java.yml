@@ -28,5 +28,10 @@ jobs:
       - name: Build and test / Maven
         run: mvn -B clean package
 
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1.0.4
+
       - name: Build and test / Gradle
-        run: ./gradlew --no-daemon clean build
+        uses: gradle/gradle-build-action@v2.2.2
+        with:
+          arguments: build
