@@ -1,5 +1,5 @@
-Infra: ![Build status](https://github.com/pelaakso/aws-lambda-templates/actions/workflows/build-infra.yml/badge.svg?branch=main)<br/>
-Java: ![Build status](https://github.com/pelaakso/aws-lambda-templates/actions/workflows/build-java.yml/badge.svg?branch=main)
+![Build status](https://github.com/pelaakso/aws-lambda-templates/actions/workflows/build-infra.yml/badge.svg?branch=main)
+![Build status](https://github.com/pelaakso/aws-lambda-templates/actions/workflows/build-java.yml/badge.svg?branch=main)
 
 # AWS Lambda templates
 
