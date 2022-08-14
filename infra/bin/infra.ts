@@ -6,6 +6,7 @@ import { JavaStack } from '../lib/java-stack';
 const app = new cdk.App();
 
 new JavaStack(app, 'JavaStack', {
+  description: 'AWS Lambda function Java templates',
   env: { account: '140966923789', region: 'eu-central-1' },
 });
 
