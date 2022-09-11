@@ -23,6 +23,11 @@ exports[`Java stack snapshot 1`] = `
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java, Maven build",
+        "Environment": {
+          "Variables": {
+            "JAVA_TOOL_OPTIONS": "-XX:+TieredCompilation -XX:TieredStopAtLevel=1",
+          },
+        },
         "FunctionName": "blank-java-template-mvn",
         "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
@@ -50,6 +55,11 @@ exports[`Java stack snapshot 1`] = `
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Java, Gradle build",
+        "Environment": {
+          "Variables": {
+            "JAVA_TOOL_OPTIONS": "-XX:+TieredCompilation -XX:TieredStopAtLevel=1",
+          },
+        },
         "FunctionName": "blank-java-template-gradle",
         "Handler": "be.petey952.blankjava.Handler",
         "MemorySize": 512,
@@ -141,6 +151,7 @@ exports[`Java stack snapshot 1`] = `
         "Description": "Blank Lambda template using Java with Powertools, Maven build",
         "Environment": {
           "Variables": {
+            "JAVA_TOOL_OPTIONS": "-XX:+TieredCompilation -XX:TieredStopAtLevel=1",
             "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertools",
           },
         },
@@ -173,6 +184,7 @@ exports[`Java stack snapshot 1`] = `
         "Description": "Blank Lambda template using Java with Powertools, Gradle build",
         "Environment": {
           "Variables": {
+            "JAVA_TOOL_OPTIONS": "-XX:+TieredCompilation -XX:TieredStopAtLevel=1",
             "POWERTOOLS_SERVICE_NAME": "BlankJavaTemplateWithPowertoolsGradle",
           },
         },
