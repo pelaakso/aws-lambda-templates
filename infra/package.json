@@ -18,7 +18,7 @@
     "cdk": "npx cdk"
   },
   "devDependencies": {
-    "@types/node": "^16.11.68",
+    "@types/node": "^16.18.2",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
     "aws-cdk": "^2.49.0",
