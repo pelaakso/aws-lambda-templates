@@ -10,6 +10,7 @@ public class Handler implements RequestHandler<String, String> {
 
     public Handler() {
         // Initialize stuff here
+        LOG.info("{} constructor called", this.getClass().getCanonicalName());
     }
 
     @Override
