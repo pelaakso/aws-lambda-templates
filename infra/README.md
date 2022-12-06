@@ -3,7 +3,7 @@
 Using:
 
 * TypeScript
-* Node 16.x (at the time of writing the version supported by AWS Lambda)
+* Node 18.x (at the time of writing the version supported by AWS Lambda)
 
 ## Useful commands
 
