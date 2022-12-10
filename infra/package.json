@@ -21,7 +21,7 @@
     "@types/node": "^18.11.11",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
-    "aws-cdk": "^2.53.0",
+    "aws-cdk": "^2.54.0",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -32,8 +32,8 @@
     "vitest": "^0.25.4"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.53.0",
-    "constructs": "^10.1.180",
+    "aws-cdk-lib": "^2.54.0",
+    "constructs": "^10.1.185",
     "source-map-support": "^0.5.16"
   }
 }
