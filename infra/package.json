@@ -18,22 +18,22 @@
     "cdk": "npx cdk"
   },
   "devDependencies": {
-    "@types/node": "^18.14.1",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
-    "aws-cdk": "^2.66.1",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "aws-cdk": "^2.69.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vitest": "^0.29.1"
+    "vite": "^4.2.0",
+    "vitest": "^0.29.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.66.1",
-    "constructs": "^10.1.261",
+    "aws-cdk-lib": "^2.69.0",
+    "constructs": "^10.1.282",
     "source-map-support": "^0.5.16"
   }
 }
