@@ -11,12 +11,13 @@ public class Handler implements RequestHandler<String, String> {
 
     public Handler() {
         // Initialize stuff here
+        LOG.info("{} constructor called", this.getClass().getCanonicalName());
     }
 
     @Override
     @Logging
     public String handleRequest(String s, Context context) {
-        LOG.info("Handler was called");
+        LOG.info("Function {}:{} handler was called", context.getFunctionName(), context.getFunctionVersion());
         LOG.info("Payload string was {}", s);
 
         return "200 OK";

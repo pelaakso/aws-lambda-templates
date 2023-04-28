@@ -15,7 +15,7 @@ public class Handler implements RequestHandler<String, String> {
 
     @Override
     public String handleRequest(String s, Context context) {
-        LOG.info("Handler was called");
+        LOG.info("Function {}:{} handler was called", context.getFunctionName(), context.getFunctionVersion());
 
         return "200 OK";
     }
