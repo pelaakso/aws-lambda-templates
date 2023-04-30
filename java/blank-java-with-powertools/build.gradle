@@ -6,6 +6,7 @@ description = 'Blank AWS Lambda function template in Java with Powertools depend
 
 dependencies {
     // Dependencies
+    implementation "org.aspectj:aspectjrt:${aspectjVersion}"
     implementation "com.amazonaws:aws-lambda-java-core:${awsLambdaJavaCoreVersion}"
     implementation "com.amazonaws:aws-lambda-java-events:${awsLambdaJavaEventsVersion}"
     implementation "com.amazonaws:aws-lambda-java-log4j2:${awsLambdaJavaLog4j2Version}"
