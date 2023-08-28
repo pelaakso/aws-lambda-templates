@@ -39,7 +39,7 @@ export class JavaStack extends Stack {
       code: props?.isUnitTest
         ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
         : lambda.Code.fromAsset(
-            '../java/blank-java-with-powertools/target/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip'
+            '../java/blank-java-with-powertools/target/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip',
           ),
       handler: 'be.petey952.blankjavapowertools.Handler',
       runtime,
@@ -74,7 +74,7 @@ export class JavaStack extends Stack {
       code: props?.isUnitTest
         ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
         : lambda.Code.fromAsset(
-            '../java/blank-java-with-powertools/build/distributions/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip'
+            '../java/blank-java-with-powertools/build/distributions/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip',
           ),
       handler: 'be.petey952.blankjavapowertools.Handler',
       runtime,
