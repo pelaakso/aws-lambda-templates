@@ -136,6 +136,93 @@ exports[`Java stack snapshot 1`] = `
       },
       "Type": "AWS::IAM::Role",
     },
+    "BlankJavaSnapStart84D59D49": {
+      "DependsOn": [
+        "BlankJavaSnapStartServiceRole5910D271",
+      ],
+      "Properties": {
+        "Architectures": [
+          "x86_64",
+        ],
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
+          "S3Key": 64-byte-asset-hash-removed.zip,
+        },
+        "Description": "Blank Lambda template using Java and SnapStart, Maven build",
+        "FunctionName": "blank-java-template-snapstart-mvn",
+        "Handler": "be.petey952.blankjava.Handler",
+        "MemorySize": 512,
+        "Role": {
+          "Fn::GetAtt": [
+            "BlankJavaSnapStartServiceRole5910D271",
+            "Arn",
+          ],
+        },
+        "Runtime": "java17",
+        "SnapStart": {
+          "ApplyOn": "PublishedVersions",
+        },
+        "Timeout": 15,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "BlankJavaSnapStartAliasC69DA9B6": {
+      "Properties": {
+        "Description": "\\"current\\" alias refers to latest version of the function",
+        "FunctionName": {
+          "Ref": "BlankJavaSnapStart84D59D49",
+        },
+        "FunctionVersion": {
+          "Fn::GetAtt": [
+            "BlankJavaSnapStartCurrentVersion0705CBD22eb0c9b34db0d8f163f818f50bcbbef2",
+            "Version",
+          ],
+        },
+        "Name": "current",
+      },
+      "Type": "AWS::Lambda::Alias",
+    },
+    "BlankJavaSnapStartCurrentVersion0705CBD22eb0c9b34db0d8f163f818f50bcbbef2": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BlankJavaSnapStart84D59D49",
+        },
+      },
+      "Type": "AWS::Lambda::Version",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "BlankJavaSnapStartServiceRole5910D271": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
     "BlankJavaWithPowertoolsCEDCD5E4": {
       "DependsOn": [
         "BlankJavaWithPowertoolsServiceRoleC5418871",
