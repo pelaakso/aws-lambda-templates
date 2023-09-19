@@ -1,5 +1,5 @@
 import * as lambda from 'aws-cdk-lib/aws-lambda';
-import { Duration, Stack, StackProps } from 'aws-cdk-lib';
+import { Duration, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
 export interface Props extends StackProps {
@@ -33,6 +33,34 @@ export class JavaStack extends Stack {
       },
       functionName: 'blank-java-template-mvn',
       description: 'Blank Lambda template using Java, Maven build',
+    });
+
+    const fnBlankSnapStartMvn = new lambda.Function(this, 'BlankJavaSnapStart', {
+      code: props?.isUnitTest
+        ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
+        : lambda.Code.fromAsset('../java/blank-java/target/blank-java-0.0.1-SNAPSHOT-package.zip'),
+      handler: 'be.petey952.blankjava.Handler',
+      runtime,
+      // At the time of writing SnapStart is only available for x86_64
+      architecture: lambda.Architecture.X86_64,
+      memorySize: 512,
+      timeout: Duration.seconds(15),
+      //environment: {
+      //  JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
+      //},
+      currentVersionOptions: {
+        removalPolicy: RemovalPolicy.RETAIN,
+      },
+      snapStart: lambda.SnapStartConf.ON_PUBLISHED_VERSIONS,
+      functionName: 'blank-java-template-snapstart-mvn',
+      description: 'Blank Lambda template using Java and SnapStart, Maven build',
+    });
+    // used to make sure each CDK synthesis produces a different Version
+    const version = fnBlankSnapStartMvn.currentVersion;
+    new lambda.Alias(this, 'BlankJavaSnapStartAlias', {
+      aliasName: 'current',
+      version,
+      description: '"current" alias refers to latest version of the function',
     });
 
     new lambda.Function(this, 'BlankJavaWithPowertools', {
