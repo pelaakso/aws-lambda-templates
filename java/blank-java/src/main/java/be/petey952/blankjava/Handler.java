@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class Handler implements RequestHandler<String, String> {
     private static final Logger LOG = LoggerFactory.getLogger(Handler.class);
+    static final long VER = 3L;
 
     public Handler() {
         // Initialize stuff here
@@ -16,7 +17,8 @@ public class Handler implements RequestHandler<String, String> {
     @Override
     public String handleRequest(String s, Context context) {
         LOG.info("Function {}:{} handler was called", context.getFunctionName(), context.getFunctionVersion());
+        LOG.info("This is version {}", VER);
 
-        return "200 OK";
+        return "200 OK from " + VER;
     }
 }

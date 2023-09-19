@@ -15,6 +15,6 @@ class HandlerTest {
 
         assertThat(output)
                 .as("Handler output check failed")
-                .isEqualTo("200 OK");
+                .isEqualTo("200 OK from " + Handler.VER);
     }
 }
