@@ -2,11 +2,17 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { JavaStack } from '../lib/java-stack';
+import { TypescriptStack } from '../lib/typescript-stack';
 
 const app = new cdk.App();
 
 new JavaStack(app, 'JavaStack', {
   description: 'AWS Lambda function Java templates',
+  env: { account: '140966923789', region: 'eu-central-1' },
+});
+
+new TypescriptStack(app, 'LambdaTemplatesTypescriptStack', {
+  description: 'AWS Lambda function TypeScript templates',
   env: { account: '140966923789', region: 'eu-central-1' },
 });
 
