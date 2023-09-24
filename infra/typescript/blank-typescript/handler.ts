@@ -1,0 +1,17 @@
+import { APIGatewayProxyEvent, APIGatewayProxyResult, Context, Handler } from 'aws-lambda';
+
+export const handler: Handler = async (
+  event: APIGatewayProxyEvent,
+  context: Context,
+): Promise<APIGatewayProxyResult> => {
+  const input = typeof event === 'string' ? event : JSON.stringify(event);
+  console.log(`Lambda input event: ${input}`);
+  console.log(`Function ${context.functionName}:${context.functionVersion} handler was called`);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: '200 OK',
+    }),
+  };
+};

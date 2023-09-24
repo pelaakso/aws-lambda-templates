@@ -6,4 +6,5 @@
 Some "blank no-op" AWS Lambda templates to use as base for projects.
 
 * [java](./java) directory has templates in Java
+* [infra/typescript](./infra/typescript) directory has templates in TypeScript.
 * [infra](./infra) directory contains CDK infra to deploy the templates to AWS.
