@@ -1,0 +1,57 @@
+name: Infra - update almost all dependencies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-infra-dependencies:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    timeout-minutes: 4
+    defaults:
+      run:
+        shell: bash
+        working-directory: infra
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: npm
+          cache-dependency-path: |
+            infra/package-lock.json
+
+      - name: Install infra dependencies
+        run: npm i
+
+      - name: Create working branch
+        run: |
+          git checkout -b infra-deps
+
+      - name: Update dependencies
+        run: |
+          npx --yes npm-check-updates -u --reject @types/node --install always
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "pelaakso@users.noreply.github.com"
+          git config --local user.name "pelaakso"
+          git commit -a -m "Deps/infra: update most infra dependencies"
+
+      - name: Push changes
+        run: |
+          git push origin infra-deps
+
+      - name: Create pull request
+        run: |
+          gh pr create --base main --head infra-deps --title "Deps/infra: update most infra dependencies" --body "Update almost all dependencies, exluding node types"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
