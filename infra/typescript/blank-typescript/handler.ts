@@ -6,7 +6,13 @@ export const handler: Handler = async (
 ): Promise<APIGatewayProxyResult> => {
   const input = typeof event === 'string' ? event : JSON.stringify(event);
   console.log(`Lambda input event: ${input}`);
+  console.log(`Lambda input context: ${JSON.stringify(context)}`);
+
   console.log(`Function ${context.functionName}:${context.functionVersion} handler was called`);
+
+  // Print out environment variables
+  console.log('Environment variables:');
+  console.log(JSON.stringify(process.env, null, 2));
 
   return {
     statusCode: 200,
