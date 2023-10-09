@@ -40,6 +40,10 @@ jobs:
         run: |
           npx --yes npm-check-updates -u --reject @types/node --install always
 
+      - name: Test
+        run: |
+          npm run test
+
       - name: Commit changes
         run: |
           git config --local user.email "pelaakso@users.noreply.github.com"
