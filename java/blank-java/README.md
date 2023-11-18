@@ -17,7 +17,7 @@ References
 
 `mvn clean package` or `./gradlew clean build` in `java` directory.
 
-Tested with Gradle 8.1.1.
+Tested with Gradle 8.4.
 
 ## Deploy
 
@@ -27,5 +27,6 @@ Using the CDK infra in this repo.
 
 ```
 aws --profile your-profile lambda invoke --function-name blank-java-template-mvn --payload '"value"' ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-java-template-snapstart-mvn:current --payload '"value"' ~/tmp/lambda-output.txt
 aws --profile your-profile lambda invoke --function-name blank-java-template-gradle --payload '"value"' ~/tmp/lambda-output.txt
 ```
