@@ -17,14 +17,15 @@ export class JavaStack extends Stack {
     super(scope, id, props);
 
     const architecture = lambda.Architecture.ARM_64;
-    const runtime = lambda.Runtime.JAVA_17;
+    const mavenRuntime = lambda.Runtime.JAVA_21;
+    const gradleRuntime = lambda.Runtime.JAVA_17;
 
     new lambda.Function(this, 'BlankJava', {
       code: props?.isUnitTest
         ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
         : lambda.Code.fromAsset('../java/blank-java/target/blank-java-0.0.1-SNAPSHOT-package.zip'),
       handler: 'be.petey952.blankjava.Handler',
-      runtime,
+      runtime: mavenRuntime,
       architecture,
       memorySize: 512,
       timeout: Duration.seconds(15),
@@ -40,7 +41,7 @@ export class JavaStack extends Stack {
         ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
         : lambda.Code.fromAsset('../java/blank-java/target/blank-java-0.0.1-SNAPSHOT-package.zip'),
       handler: 'be.petey952.blankjava.Handler',
-      runtime,
+      runtime: mavenRuntime,
       // At the time of writing SnapStart is only available for x86_64
       architecture: lambda.Architecture.X86_64,
       memorySize: 512,
@@ -70,7 +71,7 @@ export class JavaStack extends Stack {
             '../java/blank-java-with-powertools/target/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip',
           ),
       handler: 'be.petey952.blankjavapowertools.Handler',
-      runtime,
+      runtime: mavenRuntime,
       architecture,
       memorySize: 512,
       timeout: Duration.seconds(15),
@@ -87,7 +88,7 @@ export class JavaStack extends Stack {
         ? lambda.Code.fromAsset('./test/resources/dummy-code.zip')
         : lambda.Code.fromAsset('../java/blank-java/build/distributions/blank-java-0.0.1-SNAPSHOT-package.zip'),
       handler: 'be.petey952.blankjava.Handler',
-      runtime,
+      runtime: gradleRuntime,
       architecture,
       memorySize: 512,
       timeout: Duration.seconds(15),
@@ -105,7 +106,7 @@ export class JavaStack extends Stack {
             '../java/blank-java-with-powertools/build/distributions/blank-java-with-powertools-0.0.1-SNAPSHOT-package.zip',
           ),
       handler: 'be.petey952.blankjavapowertools.Handler',
-      runtime,
+      runtime: gradleRuntime,
       architecture,
       memorySize: 512,
       timeout: Duration.seconds(15),

@@ -37,7 +37,7 @@ exports[`Java stack snapshot 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "java17",
+        "Runtime": "java21",
         "Timeout": 15,
       },
       "Type": "AWS::Lambda::Function",
@@ -158,7 +158,7 @@ exports[`Java stack snapshot 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "java17",
+        "Runtime": "java21",
         "SnapStart": {
           "ApplyOn": "PublishedVersions",
         },
@@ -174,7 +174,7 @@ exports[`Java stack snapshot 1`] = `
         },
         "FunctionVersion": {
           "Fn::GetAtt": [
-            "BlankJavaSnapStartCurrentVersion0705CBD22eb0c9b34db0d8f163f818f50bcbbef2",
+            "BlankJavaSnapStartCurrentVersion0705CBD278c28e524c770c50723dea34e1bee270",
             "Version",
           ],
         },
@@ -182,7 +182,7 @@ exports[`Java stack snapshot 1`] = `
       },
       "Type": "AWS::Lambda::Alias",
     },
-    "BlankJavaSnapStartCurrentVersion0705CBD22eb0c9b34db0d8f163f818f50bcbbef2": {
+    "BlankJavaSnapStartCurrentVersion0705CBD278c28e524c770c50723dea34e1bee270": {
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
@@ -251,7 +251,7 @@ exports[`Java stack snapshot 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "java17",
+        "Runtime": "java21",
         "Timeout": 15,
       },
       "Type": "AWS::Lambda::Function",
