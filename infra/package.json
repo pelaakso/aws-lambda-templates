@@ -14,7 +14,7 @@
     "clean": "npx rimraf '+(bin|lib|functions|test|utils)/**/+(*.d.ts|*.js)'",
     "watch": "tsc -w",
     "snap": "vitest",
-    "test": "npm run build && vitest run",
+    "test": "npm run build && vitest --no-threads run",
     "cdk": "npx cdk"
   },
   "devDependencies": {

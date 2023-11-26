@@ -26,6 +26,7 @@ export class TypescriptStack extends Stack {
       runtime: lambda.Runtime.NODEJS_20_X,
       memorySize: 512,
       timeout: Duration.seconds(15),
+      logFormat: lambda.LogFormat.TEXT,
     });
   }
 }
