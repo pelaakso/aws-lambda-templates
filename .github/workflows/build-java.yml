@@ -36,5 +36,4 @@ jobs:
 
       - name: Build and test / Gradle
         run: |
-          cd java
           ./gradlew build
