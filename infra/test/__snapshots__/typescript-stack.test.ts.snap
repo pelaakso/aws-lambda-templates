@@ -23,11 +23,6 @@ exports[`TypeScript stack snapshot 1`] = `
           "S3Key": 64-byte-asset-hash-removed.zip,
         },
         "Description": "Blank Lambda template using Typescript",
-        "Environment": {
-          "Variables": {
-            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
-          },
-        },
         "FunctionName": "blank-typescript-template",
         "Handler": "index.handler",
         "LoggingConfig": {
