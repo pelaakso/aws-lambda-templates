@@ -42,8 +42,7 @@ export class JavaStack extends Stack {
         : lambda.Code.fromAsset('../java/blank-java/target/blank-java-0.0.1-SNAPSHOT-package.zip'),
       handler: 'be.petey952.blankjava.Handler',
       runtime: mavenRuntime,
-      // At the time of writing SnapStart is only available for x86_64
-      architecture: lambda.Architecture.X86_64,
+      architecture,
       memorySize: 512,
       timeout: Duration.seconds(15),
       //environment: {

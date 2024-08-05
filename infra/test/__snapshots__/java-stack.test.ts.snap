@@ -142,7 +142,7 @@ exports[`Java stack snapshot 1`] = `
       ],
       "Properties": {
         "Architectures": [
-          "x86_64",
+          "arm64",
         ],
         "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-140966923789-eu-central-1",
@@ -174,7 +174,7 @@ exports[`Java stack snapshot 1`] = `
         },
         "FunctionVersion": {
           "Fn::GetAtt": [
-            "BlankJavaSnapStartCurrentVersion0705CBD278c28e524c770c50723dea34e1bee270",
+            "BlankJavaSnapStartCurrentVersion0705CBD2c387308d66fe9c5b7fb992b063b05c8e",
             "Version",
           ],
         },
@@ -182,7 +182,7 @@ exports[`Java stack snapshot 1`] = `
       },
       "Type": "AWS::Lambda::Alias",
     },
-    "BlankJavaSnapStartCurrentVersion0705CBD278c28e524c770c50723dea34e1bee270": {
+    "BlankJavaSnapStartCurrentVersion0705CBD2c387308d66fe9c5b7fb992b063b05c8e": {
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {

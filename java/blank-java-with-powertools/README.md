@@ -7,8 +7,8 @@ The handler method accepts a string, see Invoke section on how to specify input 
 
 References
 
-* [Working with Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html) in AWS Lambda Developer Guide.
-* [Lambda Powertools Java](https://awslabs.github.io/aws-lambda-powertools-java/)
+- [Working with Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html) in AWS Lambda Developer Guide.
+- [Lambda Powertools Java](https://awslabs.github.io/aws-lambda-powertools-java/)
 
 ## Build
 
@@ -23,6 +23,6 @@ Using the CDK infra in this repo.
 ## Invoke
 
 ```
-aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-mvn --payload '"value"' ~/tmp/lambda-output.txt
-aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-gradle --payload '"value"' ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-mvn --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-gradle --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
 ```
