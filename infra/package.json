@@ -18,6 +18,8 @@
     "cdk": "npx cdk"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
     "@types/aws-lambda": "^8.10.142",
     "@types/node": "20.10.8",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
@@ -27,6 +29,7 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
