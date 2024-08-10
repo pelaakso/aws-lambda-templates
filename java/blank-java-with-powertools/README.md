@@ -22,6 +22,8 @@ Using the CDK infra in this repo.
 
 ## Invoke
 
+Invoke requires AWS CLI v2.
+
 ```
 aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-mvn --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
 aws --profile your-profile lambda invoke --function-name blank-java-template-with-powertools-gradle --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt

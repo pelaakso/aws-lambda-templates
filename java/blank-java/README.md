@@ -25,6 +25,8 @@ Using the CDK infra in this repo.
 
 ## Invoke
 
+Might require AWS CLI v2.
+
 ```
 aws --profile your-profile lambda invoke --function-name blank-java-template-mvn --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
 aws --profile your-profile lambda invoke --function-name blank-java-template-snapstart-mvn:current --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
