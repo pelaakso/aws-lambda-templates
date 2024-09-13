@@ -29,10 +29,10 @@ jobs:
         run: mvn -B clean package
 
       - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v4.0.1
+        uses: gradle/actions/wrapper-validation@v4.1.0
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4.0.1
+        uses: gradle/actions/setup-gradle@v4.1.0
 
       - name: Build and test / Gradle
         run: |
