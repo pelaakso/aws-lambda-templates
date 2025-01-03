@@ -24,7 +24,7 @@ export class TypescriptStack extends Stack {
       functionName: 'blank-typescript-template',
       description: 'Blank Lambda template using Typescript',
       architecture: lambda.Architecture.ARM_64,
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       memorySize: 512,
       timeout: Duration.seconds(15),
       loggingFormat: lambda.LoggingFormat.TEXT,
