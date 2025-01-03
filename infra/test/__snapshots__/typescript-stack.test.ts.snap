@@ -40,7 +40,7 @@ exports[`TypeScript stack snapshot 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs20.x",
+        "Runtime": "nodejs22.x",
         "Timeout": 15,
       },
       "Type": "AWS::Lambda::Function",
