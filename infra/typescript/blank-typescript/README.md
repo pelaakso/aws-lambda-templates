@@ -7,7 +7,7 @@ The handler method accepts a string or a JSON object, see Invoke section on how 
 
 References
 
-* [Building with TypeScript](https://docs.aws.amazon.com/lambda/latest/dg/lambda-typescript.html) in AWS Lambda Developer Guide.
+- [Building with TypeScript](https://docs.aws.amazon.com/lambda/latest/dg/lambda-typescript.html) in AWS Lambda Developer Guide.
 
 ## Build
 
@@ -20,6 +20,8 @@ Using the CDK infra in this repo.
 
 ## Invoke
 
+Might require AWS CLI v2.
+
 ```
-aws --profile your-profile lambda invoke --function-name blank-typescript-template --payload '"value"' ~/tmp/lambda-output.txt
+aws --profile your-profile lambda invoke --function-name blank-typescript-template --payload '"value"' --cli-binary-format raw-in-base64-out ~/tmp/lambda-output.txt
 ```
