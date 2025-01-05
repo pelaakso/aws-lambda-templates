@@ -6,7 +6,7 @@
   },
   "engines": {
     "node": ">20.0.0 <23.0.0",
-    "npm": ">=10.0.0"
+    "npm": ">=9.0.0"
   },
   "scripts": {
     "all": "npx eslint . && npx prettier --check . && npm run test",
