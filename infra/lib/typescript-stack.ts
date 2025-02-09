@@ -2,6 +2,7 @@ import { Duration, Stack, StackProps } from 'aws-cdk-lib';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as nodejs from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
+import { LambdaMemory } from './constants';
 
 export interface Props extends StackProps {
   /**
@@ -25,7 +26,7 @@ export class TypescriptStack extends Stack {
       description: 'Blank Lambda template using Typescript',
       architecture: lambda.Architecture.ARM_64,
       runtime: lambda.Runtime.NODEJS_22_X,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       loggingFormat: lambda.LoggingFormat.TEXT,
     });
