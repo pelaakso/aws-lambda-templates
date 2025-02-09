@@ -1,6 +1,7 @@
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Duration, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { LambdaMemory } from './constants';
 
 export interface Props extends StackProps {
   /**
@@ -27,7 +28,7 @@ export class JavaStack extends Stack {
       handler: 'be.petey952.blankjava.Handler',
       runtime: mavenRuntime,
       architecture,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       environment: {
         JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
@@ -43,7 +44,7 @@ export class JavaStack extends Stack {
       handler: 'be.petey952.blankjava.Handler',
       runtime: mavenRuntime,
       architecture,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       //environment: {
       //  JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
@@ -72,7 +73,7 @@ export class JavaStack extends Stack {
       handler: 'be.petey952.blankjavapowertools.Handler',
       runtime: mavenRuntime,
       architecture,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       environment: {
         JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
@@ -89,7 +90,7 @@ export class JavaStack extends Stack {
       handler: 'be.petey952.blankjava.Handler',
       runtime: gradleRuntime,
       architecture,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       environment: {
         JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
@@ -107,7 +108,7 @@ export class JavaStack extends Stack {
       handler: 'be.petey952.blankjavapowertools.Handler',
       runtime: gradleRuntime,
       architecture,
-      memorySize: 512,
+      memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
       environment: {
         JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1',
