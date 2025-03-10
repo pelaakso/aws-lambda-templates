@@ -19,7 +19,6 @@ export class TypescriptStack extends Stack {
     super(scope, id, props);
 
     new nodejs.NodejsFunction(this, 'BlankTypescript', {
-      awsSdkConnectionReuse: true,
       entry: './typescript/blank-typescript/handler.ts',
       handler: 'handler',
       functionName: 'blank-typescript-template',
