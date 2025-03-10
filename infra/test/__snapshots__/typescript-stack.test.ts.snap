@@ -31,7 +31,9 @@ exports[`TypeScript stack snapshot 1`] = `
         "FunctionName": "blank-typescript-template",
         "Handler": "index.handler",
         "LoggingConfig": {
-          "LogFormat": "Text",
+          "ApplicationLogLevel": "DEBUG",
+          "LogFormat": "JSON",
+          "SystemLogLevel": "INFO",
         },
         "MemorySize": 512,
         "Role": {
