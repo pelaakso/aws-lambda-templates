@@ -28,7 +28,9 @@ export class TypescriptStack extends Stack {
       runtime: lambda.Runtime.NODEJS_22_X,
       memorySize: LambdaMemory.QUARTER_VCPU,
       timeout: Duration.seconds(15),
-      loggingFormat: lambda.LoggingFormat.TEXT,
+      loggingFormat: lambda.LoggingFormat.JSON,
+      applicationLogLevelV2: lambda.ApplicationLogLevel.DEBUG,
+      systemLogLevelV2: lambda.SystemLogLevel.INFO,
     });
   }
 }
