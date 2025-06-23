@@ -47,14 +47,14 @@ Run these commands from the `java/` directory:
 
 ```bash
 # Maven build (builds all modules)
-mvn clean package
+jenv exec mvn clean package
 
 # Gradle build
-./gradlew build
+jenv exec ./gradlew build
 
 # Individual module builds
-cd blank-java && mvn clean package
-cd blank-java-with-powertools && mvn clean package
+cd blank-java && jenv exec mvn clean package
+cd blank-java-with-powertools && jenv exec mvn clean package
 ```
 
 ## Architecture
