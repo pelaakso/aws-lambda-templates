@@ -20,7 +20,7 @@
 
         <!-- Plugin versions -->
         <aspectj-maven-plugin.version>1.15.0</aspectj-maven-plugin.version>
-        <assertj-core.version>3.27.3</assertj-core.version>
+        <assertj-core.version>3.27.4</assertj-core.version>
         <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
         <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
