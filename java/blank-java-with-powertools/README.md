@@ -14,7 +14,7 @@ References
 
 `mvn clean package` or `./gradlew clean build` in `java` directory.
 
-Tested with Gradle 8.4.
+Tested with Gradle 8.13.
 
 ## Deploy
 
