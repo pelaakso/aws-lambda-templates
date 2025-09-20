@@ -184,6 +184,9 @@ exports[`Java stack snapshot 1`] = `
     },
     "BlankJavaSnapStartCurrentVersion0705CBD2c387308d66fe9c5b7fb992b063b05c8e": {
       "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "BlankJavaSnapStart84D59D49",
