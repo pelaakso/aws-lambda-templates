@@ -14,8 +14,9 @@
         <aws-lambda-java-core.version>1.3.0</aws-lambda-java-core.version>
         <aws-lambda-java-events.version>3.16.1</aws-lambda-java-events.version>
         <aws-lambda-java-log4j2.version>1.5.1</aws-lambda-java-log4j2.version>
-        <aws-lambda-java-powertools.version>1.20.1</aws-lambda-java-powertools.version>
-        <log4j2.version>2.18.0</log4j2.version>
+        <aws-lambda-java-powertools.version>2.4.0</aws-lambda-java-powertools.version>
+        <log4j2.version>2.25.1</log4j2.version>
+        <aspectj.version>1.9.22</aspectj.version>
         <junit-jupiter.version>5.13.4</junit-jupiter.version>
 
         <!-- Plugin versions -->
@@ -51,7 +52,7 @@
             </dependency>
             <dependency>
                 <groupId>software.amazon.lambda</groupId>
-                <artifactId>powertools-logging</artifactId>
+                <artifactId>powertools-logging-log4j</artifactId>
                 <version>${aws-lambda-java-powertools.version}</version>
             </dependency>
             <dependency>
@@ -77,8 +78,13 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j18-impl</artifactId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
                 <version>${log4j2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
             </dependency>
 
             <!-- Test dependencies -->
