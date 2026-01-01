@@ -61,7 +61,7 @@ After deploying, inspect CloudWatch or runtime logs to confirm expected behavior
 
 - [Maven Central Repository](https://search.maven.org/)
 - [Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
-- [Node.js 22 Documentation](https://nodejs.org/docs/latest-v22.x/api/)
+- [Node.js 24 Documentation](https://nodejs.org/docs/latest-v24.x/api/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 
 ### Testing & Quality

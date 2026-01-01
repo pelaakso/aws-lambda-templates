@@ -21,10 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Use Node.js 22.x
+      - name: Use Node.js 24.x
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           cache: npm
           cache-dependency-path: |
             infra/package-lock.json
@@ -38,7 +38,7 @@ jobs:
 
       - name: Update dependencies
         run: |
-          npx --yes npm-check-updates -u --install always
+          npx --yes npm-check-updates -u --reject @types/node --install always
 
       - name: Test
         run: |
@@ -56,6 +56,6 @@ jobs:
 
       - name: Create pull request
         run: |
-          gh pr create --base main --head infra-deps --title "Deps/infra: update infra dependencies" --body "Update all dependencies"
+          gh pr create --base main --head infra-deps --title "Deps/infra: update infra dependencies" --body "Update all dependencies, exluding node types"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

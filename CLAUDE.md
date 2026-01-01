@@ -70,7 +70,7 @@ cd blank-java-with-powertools && jenv exec mvn clean package
 
 ### Lambda Configuration Patterns
 
-- All Lambdas use ARM64 architecture and Java 21/Node.js 22
+- All Lambdas use ARM64 architecture and Java 21/Node.js 24
 - Memory allocation uses constants from `infra/lib/constants.ts` (QUARTER_VCPU = 512MB)
 - Standard 15-second timeout
 - Environment variables for Java optimization: `JAVA_TOOL_OPTIONS: '-XX:+TieredCompilation -XX:TieredStopAtLevel=1'`
@@ -106,7 +106,7 @@ The project uses GitHub Actions with two workflows:
 
 - AWS CDK v2 for infrastructure
 - AWS Lambda Java Core/Events/Powertools
-- Node.js 22+ and Java 21 runtimes
+- Node.js 24+ and Java 21 runtimes
 - ESLint/Prettier for TypeScript code quality
 - Maven/Gradle for Java builds
 
@@ -123,7 +123,7 @@ The project uses GitHub Actions with two workflows:
 
 - [Maven Central Repository](https://search.maven.org/)
 - [Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
-- [Node.js 22 Documentation](https://nodejs.org/docs/latest-v22.x/api/)
+- [Node.js 24 Documentation](https://nodejs.org/docs/latest-v24.x/api/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 
 ### Testing & Quality
