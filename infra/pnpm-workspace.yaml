@@ -7,7 +7,9 @@ minimumReleaseAge: 2880
 strictDepBuilds: true
 trustPolicy: no-downgrade
 trustPolicyExclude:
- - semver@6.3.1
- - ts-api-utils@2.3.0
-onlyBuiltDependencies: []
+  - semver@6.3.1
+  - ts-api-utils@2.3.0
+onlyBuiltDependencies:
+  - esbuild@0.27.2
+  - unrs-resolver@1.11.1
 ignoredBuiltDependencies: []
