@@ -16,23 +16,23 @@ AWS CDK code is in `infra/`, where `bin/infra.ts` bootstraps stacks in `infra/li
 - `jenv exec mvn clean install` (run from `java/`) compiles every template and executes the JUnit suite using Maven.
 - `jenv exec ./gradlew :blank-java:test` focuses on a single Java module; swap the project name as needed.
 - `jenv exec mvn -pl :blank-java -am clean package` confirms Maven consumers can build the template.
-- `npm install` sets up dependencies inside `infra/`.
-- `npm run build` type-checks the CDK project; `npm test` runs Jest.
-- `npm run cdk -- synth` validates the stacks; add `diff` before deploys.
-- `npm run clean`, `jenv exec ./gradlew clean` and `jenv exec mvn clean` removes generated artifacts such as `build/`, `target/`, and `cdk.out/`.
+- `pnpm install` sets up dependencies inside `infra/`.
+- `pnpm run build` type-checks the CDK project; `pnpm run test` runs Jest.
+- `pnpm run cdk -- synth` validates the stacks; add `diff` before deploys.
+- `pnpm run clean`, `jenv exec ./gradlew clean` and `jenv exec mvn clean` removes generated artifacts such as `build/`, `target/`, and `cdk.out/`.
 
 ## Coding Style & Naming Conventions
 
 Java follows 4-space indentation, PascalCase classes, camelCase members, and packages under `be.petey952.awslambdatemplates.*`.
 Name Lambda handlers with a `Handler` suffix to match existing modules.
-TypeScript uses ESLint + Prettier; run `npm run all` before committing.
+TypeScript uses ESLint + Prettier; run `pnpm run all` before committing.
 Keep Lambda directories kebab-case for parity across languages.
 
 ## Testing Guidelines
 
 JUnit 5 powers Java tests; place new suites in `src/test/java` with filenames ending in `Test`.
 Store reusable fixtures in `src/test/resources` and cover both success and failure paths for each handler.
-The CDK project uses Jest; refresh snapshots with `npm run snap` and avoid committing stale `__snapshots__` folders.
+The CDK project uses Jest; refresh snapshots with `pnpm run snap` and avoid committing stale `__snapshots__` folders.
 Add tests before requesting review, especially for new Lambda logic.
 
 ## Commit & Pull Request Guidelines
@@ -45,7 +45,7 @@ Include screenshots or console snippets when behavior or generated CloudFormatio
 ## Security & Deployment Tips
 
 Never commit credentials or `.env` files; rely on named AWS profiles and CDK context parameters for secrets.
-Review IAM updates with `npm run cdk -- diff` before deployment and favor least-privilege policies in `infra/lib/*.ts`.
+Review IAM updates with `pnpm run cdk -- diff` before deployment and favor least-privilege policies in `infra/lib/*.ts`.
 After deploying, inspect CloudWatch or runtime logs to confirm expected behavior.
 
 ## Documentation References

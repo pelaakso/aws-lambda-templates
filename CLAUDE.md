@@ -24,21 +24,21 @@ Run these commands from the `infra/` directory:
 
 ```bash
 # Install dependencies
-npm ci
+pnpm install
 
 # Run all checks (lint, format, test)
-npm run all
+pnpm run all
 
 # Individual commands
-npm run build          # TypeScript compilation check
-npx eslint .          # Linting
-npx prettier --check . # Code formatting check
-npm run test          # Run Jest tests
-npm run snap          # Update Jest snapshots
+pnpm run build         # TypeScript compilation check
+pnpm run eslint        # Linting
+pnpm run prettier      # Code formatting check
+pnpm run test          # Run Jest tests
+pnpm run snap          # Update Jest snapshots
 
 # CDK operations
-npx cdk synth         # Synthesize CloudFormation
-npx cdk deploy        # Deploy to AWS
+pnpx cdk synth         # Synthesize CloudFormation
+pnpx cdk deploy        # Deploy to AWS
 ```
 
 ### Java Development

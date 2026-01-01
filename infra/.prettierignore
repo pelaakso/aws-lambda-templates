@@ -1,4 +1,6 @@
 # Prettier automatically ignores node_modules
+pnpm-lock.yaml
+pnpm-workspace.yaml
 **/*.json
 **/*.md
 cdk.out/
