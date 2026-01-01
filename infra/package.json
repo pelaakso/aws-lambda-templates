@@ -6,16 +6,20 @@
   },
   "engines": {
     "node": ">22.0.0 <25.0.0",
-    "npm": ">=10.0.0"
+    "pnpm": ">=10.22.0",
+    "npm": "\n\nUse pnpm!!\n\n"
   },
   "scripts": {
-    "all": "npx eslint . && npx prettier --check . && npm run test",
+    "all": "pnpm run eslint && pnpm run prettier && pnpm run test",
     "build": "tsc --noEmit",
-    "clean": "npx rimraf '+(bin|lib|functions|test|utils)/**/+(*.d.ts|*.js)'",
+    "clean": "pnpx rimraf '+(bin|lib|functions|test|utils)/**/+(*.d.ts|*.js)'",
+    "eslint": "eslint .",
+    "npm-check-updates": "npm-check-updates",
+    "prettier": "prettier --check .",
     "watch": "tsc -w",
     "snap": "jest",
-    "test": "npm run build && jest",
-    "cdk": "npx cdk"
+    "test": "pnpm run build && jest",
+    "cdk": "cdk"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
@@ -32,6 +36,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^16.5.0",
     "jest": "^30.2.0",
+    "npm-check-updates": "^19.2.0",
     "prettier": "^3.7.4",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",

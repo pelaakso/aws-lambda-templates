@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Enable version updates for infra (npm)
+  # Enable version updates for infra (pnpm)
   - package-ecosystem: "npm"
     # Where to look for package.json and lock files
     directory: "/infra"
