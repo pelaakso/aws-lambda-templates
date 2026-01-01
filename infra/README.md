@@ -18,4 +18,5 @@ Using:
 
 ## Updating dependencies
 
-- `pnpm run npm-check-updates -i --format group`
+- `pnpm run npm-check-updates -i --format group`, do not let ncu install dependencies
+- `pnpm install`

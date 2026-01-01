@@ -43,7 +43,10 @@ jobs:
 
       - name: Update dependencies
         run: |
-          pnpm run npm-check-updates -u --reject @types/node --install always
+          pnpm run npm-check-updates -u --reject @types/node --install never
+
+      - name: Install updated infra dependencies
+        run: pnpm install
 
       - name: Test
         run: |
