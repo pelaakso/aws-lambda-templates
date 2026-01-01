@@ -32,7 +32,7 @@ jobs:
           node-version: 24.x
           cache: pnpm
           cache-dependency-path: |
-            infra/pnpm-lock.json
+            infra/pnpm-lock.yaml
 
       - name: Install infra dependencies
         run: pnpm install
