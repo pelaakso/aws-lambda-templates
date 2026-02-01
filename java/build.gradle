@@ -9,8 +9,8 @@ subprojects {
     group = 'be.petey952.awslambdatemplates'
     version = '0.0.1-SNAPSHOT'
 
-    sourceCompatibility = 21
-    targetCompatibility = 21
+    sourceCompatibility = 25
+    targetCompatibility = 25
 
     repositories {
         mavenCentral()
