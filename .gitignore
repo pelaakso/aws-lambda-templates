@@ -1,6 +1,8 @@
 #Editors
 *.iml
 .idea/
+**/.project
+**/.settings/
 
 #JEnv
 .java-version

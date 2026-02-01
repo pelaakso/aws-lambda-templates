@@ -18,8 +18,8 @@ export class JavaStack extends Stack {
     super(scope, id, props);
 
     const architecture = lambda.Architecture.ARM_64;
-    const mavenRuntime = lambda.Runtime.JAVA_21;
-    const gradleRuntime = lambda.Runtime.JAVA_21;
+    const mavenRuntime = lambda.Runtime.JAVA_25;
+    const gradleRuntime = lambda.Runtime.JAVA_25;
 
     new lambda.Function(this, 'BlankJava', {
       code: props?.isUnitTest
