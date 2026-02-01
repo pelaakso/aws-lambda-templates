@@ -3,8 +3,8 @@ name: Java - build and test
 on:
   push:
     paths:
-      - 'java/**'
-      - '.github/workflows/build-java.yml'
+      - "java/**"
+      - ".github/workflows/build-java.yml"
 
 jobs:
   build-and-test-java:
@@ -22,17 +22,17 @@ jobs:
         uses: actions/setup-java@v5
         with:
           java-version: 21
-          distribution: 'corretto'
-          cache: 'maven'
+          distribution: "corretto"
+          cache: "maven"
 
       - name: Build and test / Maven
         run: mvn -B clean package
 
       - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v5.0.0
+        uses: gradle/actions/wrapper-validation@v5.0.1
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v5.0.0
+        uses: gradle/actions/setup-gradle@v5.0.1
 
       - name: Build and test / Gradle
         run: |
