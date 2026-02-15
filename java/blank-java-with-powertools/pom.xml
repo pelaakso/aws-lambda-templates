@@ -42,7 +42,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j18-impl</artifactId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
         </dependency>
 
         <dependency>
@@ -51,11 +51,20 @@
         </dependency>
         <dependency>
             <groupId>software.amazon.lambda</groupId>
+            <artifactId>powertools-logging-log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>software.amazon.lambda</groupId>
             <artifactId>powertools-logging</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>software.amazon.lambda</groupId>
             <artifactId>powertools-metrics</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
         </dependency>
 
         <!-- Test dependencies -->
@@ -111,9 +120,9 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <complianceLevel>1.8</complianceLevel>
+                    <source>25</source>
+                    <target>25</target>
+                    <complianceLevel>25</complianceLevel>
                     <aspectLibraries>
                         <aspectLibrary>
                             <groupId>software.amazon.lambda</groupId>
@@ -129,6 +138,13 @@
                         </aspectLibrary>
                     </aspectLibraries>
                 </configuration>
+                <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjtools</artifactId>
+                    <version>${aspectjrt.version}</version>
+                </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <goals>

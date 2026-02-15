@@ -2,13 +2,14 @@
 
 A blank "no-op" template for Java based AWS Lambda function.
 This template includes "Lambda Powertools Java" dependencies.
+The template is configured for Powertools Java v2 and uses the Log4j2 backend (`powertools-logging-log4j`) with SLF4J logger API in handler code.
 
 The handler method accepts a string, see Invoke section on how to specify input payload for the function.
 
 References
 
 - [Working with Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html) in AWS Lambda Developer Guide.
-- [Lambda Powertools Java](https://awslabs.github.io/aws-lambda-powertools-java/)
+- [Powertools for AWS Lambda (Java)](https://docs.aws.amazon.com/powertools/java/latest/)
 
 ## Build
 

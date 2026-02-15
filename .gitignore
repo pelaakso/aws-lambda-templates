@@ -22,3 +22,7 @@ node_modules/
 
 .cdk.staging
 cdk.out/
+
+# Planning docs (local only)
+docs/plan/
+docs/plans/

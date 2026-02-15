@@ -10,12 +10,13 @@ dependencies {
     implementation "com.amazonaws:aws-lambda-java-core:${awsLambdaJavaCoreVersion}"
     implementation "com.amazonaws:aws-lambda-java-events:${awsLambdaJavaEventsVersion}"
     implementation "com.amazonaws:aws-lambda-java-log4j2:${awsLambdaJavaLog4j2Version}"
+    implementation "software.amazon.lambda:powertools-logging-log4j:${awsLambdaJavaPowertoolsVersion}"
     aspect "software.amazon.lambda:powertools-logging:${awsLambdaJavaPowertoolsVersion}"
     aspect "software.amazon.lambda:powertools-metrics:${awsLambdaJavaPowertoolsVersion}"
     aspect "software.amazon.lambda:powertools-tracing:${awsLambdaJavaPowertoolsVersion}"
     implementation "org.apache.logging.log4j:log4j-api:${log4j2Version}"
     implementation "org.apache.logging.log4j:log4j-core:${log4j2Version}"
-    implementation "org.apache.logging.log4j:log4j-slf4j18-impl:${log4j2Version}"
+    implementation "org.apache.logging.log4j:log4j-slf4j2-impl:${log4j2Version}"
 
     // Test dependencies
     testImplementation(platform("org.junit:junit-bom:${junitJupiterVersion}"))
