@@ -17,7 +17,7 @@
         <aws-lambda-java-powertools.version>2.9.0</aws-lambda-java-powertools.version>
         <aspectjrt.version>1.9.25.1</aspectjrt.version>
         <log4j2.version>2.25.2</log4j2.version>
-        <junit-jupiter.version>6.0.2</junit-jupiter.version>
+        <junit-jupiter.version>6.0.3</junit-jupiter.version>
 
         <!-- Plugin versions -->
         <aspectj-maven-plugin.version>1.16.0</aspectj-maven-plugin.version>
