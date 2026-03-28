@@ -1,5 +1,5 @@
 ---
-name: README Updater
+name: Agentic - README Updater
 description: Reviews and updates README to ensure accuracy and completeness on request
 on:
   workflow_dispatch:
