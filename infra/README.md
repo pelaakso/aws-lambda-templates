@@ -18,5 +18,6 @@ Using:
 
 ## Updating dependencies
 
-- `pnpm run npm-check-updates -i --format group`, do not let ncu install dependencies
+- `pnpm run npm-check-updates -i --format group --cooldown 3d --target greatest|newest|minor|patch`, do not let ncu install dependencies
+  - or you can as well let ncu install the deps, should work too
 - `pnpm install`
