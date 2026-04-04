@@ -13,7 +13,7 @@
         <!-- Dependency versions -->
         <aws-lambda-java-core.version>1.4.0</aws-lambda-java-core.version>
         <aws-lambda-java-events.version>3.16.1</aws-lambda-java-events.version>
-        <aws-lambda-java-log4j2.version>1.5.1</aws-lambda-java-log4j2.version>
+        <aws-lambda-java-log4j2.version>1.6.2</aws-lambda-java-log4j2.version>
         <aws-lambda-java-powertools.version>2.9.0</aws-lambda-java-powertools.version>
         <aspectjrt.version>1.9.25.1</aspectjrt.version>
         <log4j2.version>2.25.3</log4j2.version>
