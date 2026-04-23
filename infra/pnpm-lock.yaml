@@ -40,8 +40,8 @@ importers:
         specifier: ^8.58.0
         version: 8.58.0(eslint@10.2.0)(typescript@5.9.3)
       aws-cdk:
-        specifier: ^2.1116.0
-        version: 2.1117.0
+        specifier: ^2.1118.4
+        version: 2.1118.4
       esbuild:
         specifier: ^0.28.0
         version: 0.28.0
@@ -939,8 +939,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1117.0:
-    resolution: {integrity: sha512-2NbSDDw8LTkGv0uhEDffttmNvgyTAWV5EkLkyPUGAGECzBdwCmbgmRxSoUhbzxZ0XEd1eaqbdVTFRWgtsbj31g==}
+  aws-cdk@2.1118.4:
+    resolution: {integrity: sha512-wJfRQdvb+FJ2cni059mYdmjhfwhMskP+PAB59BL9jhon+jYtjy8X3pbj3uzHgAOJwNhh6jGkP8xq36Cffccbbw==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
@@ -2990,7 +2990,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 53.13.0
       constructs: 10.6.0
 
-  aws-cdk@2.1117.0: {}
+  aws-cdk@2.1118.4: {}
 
   babel-jest@30.3.0(@babel/core@7.29.0):
     dependencies:
