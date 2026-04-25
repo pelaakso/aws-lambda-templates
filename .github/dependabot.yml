@@ -41,3 +41,4 @@ updates:
     open-pull-requests-limit: 10
     exclude-paths:
       - ".github/workflows/*.lock.yml"
+      - ".github/workflows/agentics-maintenance.yml"
