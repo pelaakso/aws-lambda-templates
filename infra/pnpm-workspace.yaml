@@ -10,6 +10,6 @@ trustPolicyExclude:
   - semver@6.3.1
   - ts-api-utils@2.3.0
 onlyBuiltDependencies:
-  - esbuild@0.28.0
+  - esbuild@0.28.1
   - unrs-resolver@1.11.1
 ignoredBuiltDependencies: []
