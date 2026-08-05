@@ -3,9 +3,9 @@ import * as cdk from 'aws-cdk-lib';
 import * as TS from '../lib/typescript-stack';
 
 test('TypeScript stack snapshot', () => {
-  const stack = new cdk.Stack();
+  const app = new cdk.App();
 
-  const myStack = new TS.TypescriptStack(stack, 'MyTestStack', {
+  const myStack = new TS.TypescriptStack(app, 'MyTestStack', {
     env: { account: '140966923789', region: 'eu-central-1' },
     isUnitTest: true,
   });
