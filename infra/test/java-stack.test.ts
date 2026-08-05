@@ -3,9 +3,9 @@ import * as cdk from 'aws-cdk-lib';
 import * as Java from '../lib/java-stack';
 
 test('Java stack snapshot', () => {
-  const stack = new cdk.Stack();
+  const app = new cdk.App();
 
-  const myStack = new Java.JavaStack(stack, 'MyTestStack', {
+  const myStack = new Java.JavaStack(app, 'MyTestStack', {
     env: { account: '140966923789', region: 'eu-central-1' },
     isUnitTest: true,
   });
