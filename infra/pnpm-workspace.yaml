@@ -11,6 +11,6 @@ trustPolicyExclude:
   - ts-api-utils@2.3.0
 onlyBuiltDependencies:
   - esbuild@0.28.1
-  - @parcel/watcher@2.6.0
+  - "@parcel/watcher@2.6.0"
   - unrs-resolver@1.12.2
 ignoredBuiltDependencies: []
